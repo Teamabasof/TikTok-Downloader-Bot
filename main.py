@@ -32,17 +32,17 @@ logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s
 
 def start_handler(update, context):
     update.message.reply_sticker('https://t.me/STM_Developers/194')
-    update.message.reply_text('Hey There! i am simple tiktok downloder Bot in Telegram\n\n🔗 Send any TikTok link to this BOT\n\n👻𝚂𝚃𝙼 𝙳𝚎𝚟𝚎𝚕𝚘𝚙𝚎𝚛𝚜✌️',parse_mode=_ParseMode)
+    update.message.reply_text('Salam! mən Telegramda sadə TikTok video yükləyici botam\n\n🔗 isdenilen TikTok linkin bu bota göndərin\n\n👻𝚂𝚃𝙼 𝙳𝚎𝚟𝚎𝚕𝚘𝚙𝚎𝚛𝚜✌️',parse_mode=_ParseMode)
 
 def about_handler(update, context):
     update.message.reply_sticker('https://t.me/slbotzone/206273')
-    update.message.reply_text('Hey There! I am simple tiktok video downloader bot in telegram\n\n`My Owner Is` :- @NidushaAmarasinghe',parse_mode=_ParseMode)
+    update.message.reply_text('Salam! mən sadə tiktok video yükləyici botam\n\n`Mənim Sahibim` :- @TTteamabasof',parse_mode=_ParseMode)
     
 def devs_handler(update, context):
-    update.message.reply_text('`Owner` :- @NidushaAmarasinghe\n\n`Founder` :- @MalithRukshan\n\n`Dev` :- @STM_Developers',parse_mode=_ParseMode)
+    update.message.reply_text('`Sahib 🇦🇿` :- @TTteamabasof\n\n`Rəssmi kanal` :- @texnoteamm\n\n`Dev` :- @STM_Developers',parse_mode=_ParseMode)
 
 def help_handler(update, context):
-    update.message.reply_text('🔗 Send any TikTok link to this BOT, then,\n🚀 This bot will Download and Send that TikTok Video for You.\n\n🔑 BOT Commands : /start , /about , /devs , /help',parse_mode=_ParseMode)
+    update.message.reply_text('🔗 İstənilən TikTok linkini bu BOT-a göndərin, sonra,\n🚀 Bu bot sizin üçün TikTok Videosunu endirib göndərəcək.\n\n🔑 BOT KOMUTLARI : /start , /about , /devs , /help',parse_mode=_ParseMode)
   
 
 # ◇─────────────────────────────────────────────────────────────────────────────────────◇
@@ -54,32 +54,32 @@ def Download_Video(Link,update, context):
     no_watermark=None
     watermark=None
 
-    status_msg=message.reply_text('🚀 DOᗯᑎᒪOᗩᗪIᑎG Video TO Sᕮᖇᐯᕮᖇ ....')
+    status_msg=message.reply_text('🚀 VİDEO YUKLENİR ....')
     status_sticker=message.reply_sticker('https://t.me/slbotzone/206254')
 
     # Getting Download Links Using API
     try:
        req=requests.get(API+Link).json()
-       no_watermark=req['no_watermark']
-       watermark= req['watermark']
-       print('Download Links Generated \n\n\n'+str(req)+'\n\n\n')
+       no_watermark=req['logosuz']
+       watermark= req['logolu']
+       print('Yükləmə linkləri yaradıldı \n\n\n'+str(req)+'\n\n\n')
     except:
-        print('Download Links Generate Error !!!')
-        status_msg.edit_text('⁉️ TikTok Downloader API Error !!! Report To Developer : @STM_Developers')
+        print('Yükləmə Linkləri Xəta Yaradır !!!')
+        status_msg.edit_text('⁉️ TikTok Dowlander API Error !!! Sahibə bilidr : @STM_Developers')
         status_sticker.delete()
         return
     
     caption_text="""◇───────────────◇
-✅ Successfully Downloaded {} Video 🔰
-🔰 Powerd by : [🏖 TikTok Download Bot 🏖](https://github.com/STM-Developers/TikTok-Download-Bot/)
+✅ Uğurla Endirildi{} Video 🔰
+🔰 Yüklədi : [🏖 TikTok Download Bot 🏖](https://github.com/STM-Developers/TikTok-Download-Bot/)
 [👻𝚂𝚃𝙼 𝙳𝚎𝚟𝚎𝚕𝚘𝚙𝚎𝚛𝚜✌️ ](https://t.me/STM_Developers)
 ◇───────────────◇"""
     
     # Uploading Downloaded Videos to Telegram
     print('Uploading Videos')
     status_msg.edit_text('☘️ 𝚄𝚙𝚕𝚘𝚊𝚍𝚒𝚗𝚐 𝚝𝚘 𝚃𝚎𝚕𝚎𝚐𝚛𝚊𝚖....')
-    message.reply_video(video=no_watermark,supports_streaming=True,caption=caption_text.format('No Watermark'),parse_mode=_ParseMode)
-    message.reply_video(video=watermark,supports_streaming=True,caption=caption_text.format('Watermark'),parse_mode=_ParseMode)
+    message.reply_video(video=no_watermark,supports_streaming=True,caption=caption_text.format('logosuz'),parse_mode=_ParseMode)
+    message.reply_video(video=watermark,supports_streaming=True,caption=caption_text.format('logolu'),parse_mode=_ParseMode)
 
     # Task Done ! So, Deleteing Status Messages
     status_msg.delete()

@@ -12,7 +12,7 @@ import logging
 # ◇─────────────────────────────────────────────────────────────────────────────────────◇
 
 # TikTok Downloader API
-API = 'https://api.reiyuura.me/api/dl/tiktok?url= +tt'
+API = 'https://single-developers.up.railway.app/tiktok?url='
 
 # Your BOT Token
 BOT_TOKEN = os.getenv("BOT_TOKEN")

@@ -39,7 +39,7 @@ def about_handler(update, context):
     update.message.reply_text('Salam! mən sadə tiktok video yükləyici botam\n\n`Mənim Sahibim` :- @TTteamabasof',parse_mode=_ParseMode)
     
 def devs_handler(update, context):
-    update.message.reply_text('`Sahib 🇦🇿` :- @TTteamabasof\n\n`Rəssmi kanal` :- @texnoteamm\n\n`Dev` :- @STM_Developers',parse_mode=_ParseMode)
+    update.message.reply_text('`Sahib 🇦🇿` :- @TTteamabasof\n\n`Rəssmi kanal` :- @texnoteamm\n\n`Dev` :- @TTteamabasof,parse_mode=_ParseMode)
 
 def help_handler(update, context):
     update.message.reply_text('🔗 İstənilən TikTok linkini bu BOT-a göndərin, sonra,\n🚀 Bu bot sizin üçün TikTok Videosunu endirib göndərəcək.\n\n🔑 BOT KOMUTLARI : /start , /about , /devs , /help',parse_mode=_ParseMode)

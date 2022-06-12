@@ -32,7 +32,7 @@ logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s
 
 def start_handler(update, context):
     update.message.reply_sticker('https://t.me/STM_Developers/194')
-    update.message.reply_text('Salam! mən Telegramda sadə TikTok video yükləyici botam\n\n🔗 isdenilen TikTok linkin bu bota göndərin\n\n👻𝚂𝚃𝙼 𝙳𝚎𝚟𝚎𝚕𝚘𝚙𝚎𝚛𝚜✌️',parse_mode=_ParseMode)
+    update.message.reply_text('Salam! mən Telegramda sadə TikTok video yükləyici botam\n\n🔗 isdenilen TikTok linkin bu bota göndərin\n\n👻T E A M A B A S O F✌️',parse_mode=_ParseMode)
 
 def about_handler(update, context):
     update.message.reply_sticker('https://t.me/slbotzone/206273')
